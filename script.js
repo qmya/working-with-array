@@ -71,3 +71,23 @@ console.log([...arr, ...arr2]);
 
 console.log(letters.join("-")); //result will string with a seperator of -
 console.log(typeof letters.join("-")); //proved here that it is a string
+
+//LOOPING ARRAYS: forEach
+
+//forEach is a higher order function
+
+const movements = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//positive values are deposits
+//negative values are withdraw
+//forEach first element is perimeter , index and than array
+
+movements.forEach(function (movement, index, array) {
+  //foreach always take a function with a parimeter of you own name
+  if (movement > 0) {
+    console.log(`Your movement ${index + 1} : Your deposite is ${movement}`);
+  } else {
+    console.log(
+      `Your movement ${index + 1}:Your withdraw is ${Math.abs(movement)}`
+    ); //Math.abs() to make the value positive
+  }
+});
