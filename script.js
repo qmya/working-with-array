@@ -91,3 +91,25 @@ movements.forEach(function (movement, index, array) {
     ); //Math.abs() to make the value positive
   }
 });
+
+//FOREACH WITH MAPS AND SETS
+
+//Map:
+const correncies = new Map([
+  ["USD", "United States dollar"],
+  ["EUR", "Euro"],
+  ["GBP", "Pound sterling"],
+]);
+console.log(correncies);
+
+correncies.forEach(function (value, key, map) {
+  console.log(`${key}: ${value} `);
+});
+
+//Set
+//set doesn't have key and indexes
+const correnciesUnique = new Set(["USD", "EUR", "GBP"]);
+console.log(correnciesUnique);
+correnciesUnique.forEach(function (value, key, map) {
+  console.log(`${key}:${value}`); //key and value are the same coz set 🚫 have keys/index
+});
