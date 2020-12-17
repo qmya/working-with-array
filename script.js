@@ -38,10 +38,22 @@ console.log(negativeEndSliceArr); //['b', 'c'];
 //its just like the slice method but it changes the original array
 //end perimeter is actually delete those from original array
 
-// console.log(arr.splice(2)); //starts from the position 2 till end of the array
-// console.log(arr); //splice changes the originl array 😲
-// console.log(arr.splice(-2)); //['d', 'e']
-// console.log(arr); //it remove the minus stuff and ["a", "b", "c"]
-// //giving ending perimeter too
+console.log(arr.splice(2)); //starts from the position 2 till end of the array
+console.log(arr); //splice changes the originl array 😲
+console.log(arr.splice(-2)); //['d', 'e']
+console.log(arr); //it remove the minus stuff and ["a", "b", "c"]
+//giving ending perimeter too
+
+//it is 👇🏽:
+// 1️⃣ perimeter is to start from this position
+//❷ perimeter is to delete this much elememts from an array
 console.log(arr.splice(1, 2)); //['b', 'c'] deleted
 console.log(arr); //[a,d,e]
+
+// Reverse array  ◀️
+//This method mutate the array
+
+arr = ["a", "b", "c", "d", "e"];
+const arr2 = ["j", "i", "h", "g", "f"];
+console.log(arr2.reverse());
+console.log(arr2);
