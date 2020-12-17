@@ -166,13 +166,33 @@ checkDogs();
 ///MAP IS JUST LIKE FOREACH BUT IN MAP WE DO :
 // Original array = 👉🏽 [3 1 4 3 2]  passes through 𝗠𝗔𝙋 currentelement * 2 gives us new array =👉🏽 [6 2 8 6 4]
 
+//Practical example: 1
+const currenyInEuro = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//let convert them to US dollar
+const euroToUSD = 1.23;
+const currencyInUS = currenyInEuro.map(function (currency) {
+  return currency * euroToUSD;
+  console.log(currencyInUS);
+});
+
+console.log(currencyInUS);
+
+//Practical example: 2
+const currencyDescriptions = currenyInEuro.map(
+  (currency, i) =>
+    `Currency ${i + 1}: ${currency > 0 ? "deposited" : "withdrew"} ${Math.abs(
+      currency
+    )}`
+);
+console.log(currencyDescriptions);
 ///////////////////////////////////////// F I L T E R  ////////////////////////////////////
-////////////////////////////////F I L T E R MAP CREATES A NEW ARRAY (Mutatable)   /////////////////////
+////////////////////////////////F I L T E R MAP CREATES A NEW ARRAY (Mutatable)   /////////////////////example:
 //array = 👉🏽 [3, 1, 4, 3, 2];
 //apply filter (current element in array) > 2
 // filteredArr = [3,4,3]
 
-///////////////////❄️ 🏐////❄️ 🏐///❄️ 🏐/// R E D U C E ////❄️ 🏐///////❄️ 🏐/////////////
+///////////////////////////////////////////////////////////////////////////////////////////
+///////////////////❄️ 🏐////❄️ 🏐///❄️ 🏐/// R E D U C E ////❄️ 🏐///////❄️ 🏐 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////F I L T E R MAP CREATES A NEW ARRAY (Mutatable)   /////////
 ///////////////////////////BOIL DOWN ALL THE ELEMENTS OF THE ARR INTO A SINGLR ELEMENTS/////////////////////////////SIMPLY ADDING THE ELEMENTS OF THE ARRAY /////////////////////////
 
