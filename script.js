@@ -33,3 +33,15 @@ let negativeEndSliceArr = arr.slice(1, -2);
 //but for the end we do : 1-(-2)= 1+2=3
 //or you can say it exract everything except the last two
 console.log(negativeEndSliceArr); //['b', 'c'];
+
+//SPLICE 😃😄😁😆😀🤪 MUTATE THE ORIGINAL ARRAY
+//its just like the slice method but it changes the original array
+//end perimeter is actually delete those from original array
+
+// console.log(arr.splice(2)); //starts from the position 2 till end of the array
+// console.log(arr); //splice changes the originl array 😲
+// console.log(arr.splice(-2)); //['d', 'e']
+// console.log(arr); //it remove the minus stuff and ["a", "b", "c"]
+// //giving ending perimeter too
+console.log(arr.splice(1, 2)); //['b', 'c'] deleted
+console.log(arr); //[a,d,e]
