@@ -225,3 +225,12 @@ console.log(withdrawalFor);
 ///////////////////////////BOIL DOWN ALL THE ELEMENTS OF THE ARR INTO A SINGLR ELEMENTS/////////////////////////////SIMPLY ADDING THE ELEMENTS OF THE ARRAY /////////////////////////
 
 //REDUCE 👉🏽 ACCUMULATOR + CURRENT = 13;
+
+const numberArray = [1, 2, 3, 4];
+//reduce also loops over the array
+const reducedNum = numberArray.reduce(function (accum, currentNum, index, arr) {
+  //accum = ACCUMULATOR (snow ball)
+  let initally = 0;
+  return accum + currentNum;
+}, 0); // 👈🏽 0 is because we want to give Accum an initial value of 0
+console.log(reducedNum);
