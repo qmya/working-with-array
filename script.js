@@ -190,7 +190,14 @@ console.log(currencyDescriptions);
 //array = 👉🏽 [3, 1, 4, 3, 2];
 //apply filter (current element in array) > 2
 // filteredArr = [3,4,3]
+const newCurrenyInEuro = [200, 450, -400, 3000, -650, -130, 70, 1300];
+//let creat an array of deposits
 
+const deposits = newCurrenyInEuro.filter(function (currency) {
+  return currency > 0 ? "filtered deposits" : null;
+});
+console.log(newCurrenyInEuro);
+console.log(deposits);
 ///////////////////////////////////////////////////////////////////////////////////////////
 ///////////////////❄️ 🏐////❄️ 🏐///❄️ 🏐/// R E D U C E ////❄️ 🏐///////❄️ 🏐 ///////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////F I L T E R MAP CREATES A NEW ARRAY (Mutatable)   /////////
