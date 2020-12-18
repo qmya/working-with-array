@@ -234,3 +234,14 @@ const reducedNum = numberArray.reduce(function (accum, currentNum, index, arr) {
   return accum + currentNum;
 }, 0); // 👈🏽 0 is because we want to give Accum an initial value of 0
 console.log(reducedNum);
+
+//Max value
+//here we will going through an array and comparing accum with the current Num , if its greater we gonna save it and move forward and compare it
+
+const randomNumArr = [23, 56, -12, 6, 89, -9, 20];
+
+const maxValueFromArr = randomNumArr.reduce(function (accum, currentNum) {
+  if (accum > currentNum) return accum;
+  else return currentNum;
+}, 0);
+console.log(maxValueFromArr);
