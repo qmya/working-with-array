@@ -243,5 +243,5 @@ const randomNumArr = [23, 56, -12, 6, 89, -9, 20];
 const maxValueFromArr = randomNumArr.reduce(function (accum, currentNum) {
   if (accum > currentNum) return accum;
   else return currentNum;
-}, 0);
+}, randomNumArr[0]); //first accumlator is at position 0
 console.log(maxValueFromArr);
