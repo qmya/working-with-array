@@ -248,18 +248,88 @@ console.log(maxValueFromArr);
 
 //Challenge# 02
 
+/* 
+Julia and Kate are doing a study on dogs. So each of them asked 5 dog owners about their dog's age, and stored the data into an array (one array for each). For now, they are just interested in knowing whether a dog is an adult or a puppy. A dog is an adult if it is at least 3 years old, and it's a puppy if it's less than 3 years old.
+
+Create a function 'checkDogs', which accepts 2 arrays of dog's ages ('dogsJulia' and 'dogsKate'), and does the following things:
+
+1. Julia found out that the owners of the FIRST and the LAST TWO dogs actually have cats, not dogs! So create a shallow copy of Julia's array, and remove the cat ages from that copied array (because it's a bad practice to mutate function parameters)
+2. Create an array with both Julia's (corrected) and Kate's data
+3. For each remaining dog, log to the console whether it's an adult ("Dog number 1 is an adult, and is 5 years old") or a puppy ("Dog number 2 is still a puppy 🐶")
+4. Run the function for both test datasets
+
+HINT: Use tools from all lectures in this section so far 😉
+
+TEST DATA 1: Julia's data [3, 5, 2, 12, 7], Kate's data [4, 1, 15, 8, 3]
+TEST DATA 2: Julia's data [9, 16, 6, 8, 3], Kate's data [10, 5, 6, 1, 4]
+
+GOOD LUCK 😀
+*/
 // const juliaDogsArr = [5, 2, 4, 1, 15, 8, 3];
 // const kateDogsArr = [16, 6, 10, 5, 6, 1, 4];
 
-const calcAverageHumanAge = function (ages) {
-  const dogAgeToHumanAge = ages.map(function (dogAge) {
-    dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4;
-  });
+// const calcAverageHumanAge = function (ages) {
+//   const dogAgeToHumanAge = ages.map(function (dogAge) {
+//     dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4;
+//   });
 
-  const adults = dogAgeToHumanAge.filter(dogAge);
-  if (age >= 18) {
-    console.log(`adults ages ${age}`);
-  }
+//   const adults = dogAgeToHumanAge.filter(dogAge);
+//   if (age >= 18) {
+//     console.log(`adults ages ${age}`);
+//   }
+// };
+// calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+// calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////🔎//🔎//🔎//🔎//🔎 F I N D 🕵🏼‍♂️ 🔍///🔍///🔍///🔍/////////////////////////////////////////////////////////////////////////////////////////////////////
+//DOES NOT CREATE A NEW ARRAY UNLIKE FILTER
+//Filter return all the elements that satisfy the condition & find just give the first element that is give in the condition
+//
+
+const firstWithDrawal = movements.find((mov) => mov < 0); //it will gives the first number less than 0 that is -400 in movements array
+console.log(movements, firstWithDrawal);
+
+// Data
+const account1 = {
+  owner: "Jonas Schmedtmann",
+  movements: [200, 450, -400, 3000, -650, -130, 70, 1300],
+  interestRate: 1.2, // %
+  pin: 1111,
 };
-calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
-calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
+
+const account2 = {
+  owner: "Jessica Davis",
+  movements: [5000, 3400, -150, -790, -3210, -1000, 8500, -30],
+  interestRate: 1.5,
+  pin: 2222,
+};
+
+const account3 = {
+  owner: "Steven Thomas Williams",
+  movements: [200, -200, 340, -300, -20, 50, 400, -460],
+  interestRate: 0.7,
+  pin: 3333,
+};
+
+const account4 = {
+  owner: "Sarah Smith",
+  movements: [430, 1000, 700, 50, 90],
+  interestRate: 1,
+  pin: 4444,
+};
+
+const accounts = [account1, account2, account3, account4];
+
+//find use full example
+//finding the account in accounts object based on their name
+
+const account = accounts.find((acc) => acc.owner === "Steven Thomas Williams");
+console.log(account);
+
+// const newAccounts = function () {
+for (const acc of accounts) {
+  return acc.owner === "Steven Thomas Williams";
+  // console.log("yes");
+}
+// };
+// newAccounts(accounts);
