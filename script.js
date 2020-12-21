@@ -245,3 +245,21 @@ const maxValueFromArr = randomNumArr.reduce(function (accum, currentNum) {
   else return currentNum;
 }, randomNumArr[0]); //first accumlator is at position 0
 console.log(maxValueFromArr);
+
+//Challenge# 02
+
+// const juliaDogsArr = [5, 2, 4, 1, 15, 8, 3];
+// const kateDogsArr = [16, 6, 10, 5, 6, 1, 4];
+
+const calcAverageHumanAge = function (ages) {
+  const dogAgeToHumanAge = ages.map(function (dogAge) {
+    dogAge <= 2 ? 2 * dogAge : 16 + dogAge * 4;
+  });
+
+  const adults = dogAgeToHumanAge.filter(dogAge);
+  if (age >= 18) {
+    console.log(`adults ages ${age}`);
+  }
+};
+calcAverageHumanAge([5, 2, 4, 1, 15, 8, 3]);
+calcAverageHumanAge([16, 6, 10, 5, 6, 1, 4]);
