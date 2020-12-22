@@ -419,3 +419,17 @@ console.log(movements);
 
 movements.sort((a, b) => b - a); //return 1
 console.log(movements);
+
+//FILL THE ARRAY
+const randomArr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+const x = new Array(7); //[empty × 7]
+console.log(x);
+
+// x.fill(1); //fill the entire array with 1
+// console.log(x.fill(1)); //[1, 1, 1, 1, 1, 1, 1]
+
+x.fill(1, 3, 5); //1 is to fill with, 3 is the starting index and 5 id the ending index
+console.log(x);
+
+randomArr.fill(23, 4, 6);
+console.log(randomArr); //Mutate the array at postion 4 , 5 with a new number
