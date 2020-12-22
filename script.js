@@ -367,3 +367,12 @@ console.log(allMovement);
 
 const movementReduce = allMovement.reduce((accum, mov) => accum + mov, 0);
 console.log(movementReduce);
+
+//Using pipleline or chaining method
+
+const allResultMovement = accounts
+  .map((acc) => acc.movements)
+  .flat()
+  .reduce((accum, mov) => accum + mov, 0);
+
+console.log(allResultMovement);
