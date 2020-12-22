@@ -403,3 +403,19 @@ movements.sort((a, b) => {
   return 0;
 });
 console.log(movements);
+//Descending order
+movements.sort((a, b) => {
+  //a : current value and b: next value
+  //If compareFunction(a, b) returns less than 0, sort a to an index lower than b (i.e. a comes first) & viceversa
+  if (a > b) return -1; //return > 0 A, B ( Keep order )
+  if (b > a) return 1; //return < 0 A, B ( Switch order)
+  // a must be equal to b
+  return 0;
+});
+console.log(movements);
+
+movements.sort((a, b) => a - b); //return 1
+console.log(movements);
+
+movements.sort((a, b) => b - a); //return 1
+console.log(movements);
