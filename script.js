@@ -433,3 +433,11 @@ console.log(x);
 
 randomArr.fill(23, 4, 6);
 console.log(randomArr); //Mutate the array at postion 4 , 5 with a new number
+
+//Array.from
+
+const y = Array.from({ length: 7 }, () => 1); //length =7 and fill it with 1
+console.log(y);
+
+const z = Array.from({ length: 7 }, (current, index) => index + 1); //length =7 and fill it with [1, 2, 3, 4, 5, 6, 7]
+console.log(z);
