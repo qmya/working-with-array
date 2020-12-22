@@ -327,9 +327,23 @@ const account = accounts.find((acc) => acc.owner === "Steven Thomas Williams");
 console.log(account);
 
 // const newAccounts = function () {
-for (const acc of accounts) {
-  return acc.owner === "Steven Thomas Williams";
-  // console.log("yes");
-}
+// for (const acc of accounts) {
+//   return acc.owner === "Steven Thomas Williams";
+//   // console.log("yes");
+// }
 // };
 // newAccounts(accounts);
+
+//findIndex
+//it will also gives you array of the user name but also the index of
+
+//includes
+console.log(movements);
+console.log(movements.includes(-130)); //it will gives us true and false
+//INCLUDES gives us boolean values
+
+//SOME CONDITION
+console.log(movements.some((mov) => mov > 0)); //true
+
+//Every condition
+console.log(movements.every((mov) => mov > 0)); //false 👉🏽 no every mov array > 0
