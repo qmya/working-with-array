@@ -347,3 +347,7 @@ console.log(movements.some((mov) => mov > 0)); //true
 
 //Every condition
 console.log(movements.every((mov) => mov > 0)); //false 👉🏽 no every mov array > 0
+
+//FLAT AND FLATMAP
+const arrNew = [[1, 2, 3], [4, 5, 6], 7, 8];
+console.log(arrNew.flat()); //Map a flat one array from an  arr inside an arr
