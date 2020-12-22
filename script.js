@@ -351,3 +351,19 @@ console.log(movements.every((mov) => mov > 0)); //false 👉🏽 no every mov ar
 //FLAT AND FLATMAP
 const arrNew = [[1, 2, 3], [4, 5, 6], 7, 8];
 console.log(arrNew.flat()); //Map a flat one array from an  arr inside an arr
+
+//Deep Nested Array
+const arrDeep = [[[1, 2], 3], [4, [5, 6]], 7, 8];
+console.log(arrDeep.flat()); //flat is by default goes 1 level deep
+
+console.log(arrDeep.flat(2));
+
+//Make a movements arrays
+console.log(movements);
+const accountMovements = accounts.map((acc) => acc.movements);
+
+const allMovement = accountMovements.flat();
+console.log(allMovement);
+
+const movementReduce = allMovement.reduce((accum, mov) => accum + mov, 0);
+console.log(movementReduce);
