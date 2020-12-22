@@ -376,3 +376,30 @@ const allResultMovement = accounts
   .reduce((accum, mov) => accum + mov, 0);
 
 console.log(allResultMovement);
+
+//FLATMAP 👉🏽👉🏽👉🏽👉🏽👉🏽👉🏽👉🏽👉🏽👉🏽👉🏽👉🏽👉🏽👉🏽👉🏽
+//do the same just like map
+const allResultMovement1 = accounts
+  .flatMap((acc) => acc.movements)
+  .reduce((accum, mov) => accum + mov, 0);
+
+console.log(allResultMovement1);
+
+//SORTING ARRAYS: Sorting convert every element of array to the string
+//Sorting of strings
+
+const owners = ["Jonas", "Zac", "Adam", "Martha"];
+console.log(owners.sort()); //["Adam", "Jonas", "Martha", "Zac" ];
+
+//Sorting of Numbers: works in Ascending order
+// console.log(movements); //[200, 450, -400, 3000, -650, -130, 70, 1300]
+// console.log(movements.sort()); //result : [-130, -400, -650, 1300, 200, 3000, 450, 70]
+movements.sort((a, b) => {
+  //a : current value and b: next value
+  //If compareFunction(a, b) returns less than 0, sort a to an index lower than b (i.e. a comes first) & viceversa
+  if (a > b) return 1; //return > 0 A, B ( Keep order )
+  if (b > a) return -1; //return < 0 A, B ( Switch order)
+  // a must be equal to b
+  return 0;
+});
+console.log(movements);
